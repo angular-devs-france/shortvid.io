@@ -151,6 +151,11 @@ export const sideBarNavConfig: sideBarNavProps = {
 				compositionId: 'DevfestLille',
 				compositionLink: 'DevfestLille',
 			},
+			{
+				compositionName: 'AngularDevsFrance',
+				compositionId: 'AngularDevsFrance',
+				compositionLink: 'AngularDevsFrance',
+			},
 		],
 	},
 };
