@@ -13,6 +13,7 @@ export type TalkProps = {
 	backgroundImg?: string;
 	speakerPicture?: string;
 	titleSize?: string;
+	titleColor?: string;
 };
 
 export const Talk: React.FC<TalkProps> = ({
@@ -24,6 +25,7 @@ export const Talk: React.FC<TalkProps> = ({
 	backgroundImg = staticFile(
 		'/images/showcases/lyonjs/defaultBackgroundImage.jpeg',
 	),
+	titleColor = '#efdb50',
 }) => {
 	return (
 		<AbsoluteFill
@@ -40,6 +42,7 @@ export const Talk: React.FC<TalkProps> = ({
 					talkTitle={talkTitle}
 					speakerPicture={speakerPicture}
 					titleSize={titleSize}
+					titleColor={titleColor}
 				/>
 
 				<EventLogo

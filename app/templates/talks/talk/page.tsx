@@ -8,6 +8,7 @@ import {ResizeWrapper} from '../../../../src/app/components/sidebar/ResizeWrappe
 import {Sidebar} from '../../../../src/app/components/sidebar/Sidebar';
 import {Form, FormConfigProps} from '../../../../src/app/forms/Form';
 import {Input} from '../../../../src/app/forms/input';
+import {ColorInput} from '../../../../src/app/forms/colorInput';
 import {useInputChange} from '../../../../src/app/hooks/useInputChange';
 import {encodeObjectValues} from '../../../../src/app/utils/encodeObjectValues';
 
@@ -31,6 +32,7 @@ export default function TalkPage() {
 		undefined,
 		'backgroundImg',
 	);
+	const [titleColor, setTitleColor] = useInputChange<string>('#efdb50', 'speakerNameColor');
 
 	const props = {
 		talkTitle,
@@ -39,6 +41,7 @@ export default function TalkPage() {
 		titleSize,
 		backgroundImg,
 		eventLogo,
+		titleColor,
 	};
 
 	const encodedParams = encodeObjectValues(props);
@@ -61,6 +64,12 @@ export default function TalkPage() {
 			setState: setTalkTitle,
 			label: 'Title',
 			component: Input,
+		},
+		titleColor: {
+			state: titleColor,
+			setState: setTitleColor,
+			label: 'Title color',
+			component: ColorInput,
 		},
 		titleSize: {
 			state: titleSize,
